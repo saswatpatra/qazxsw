@@ -11,7 +11,7 @@ const WORD_DURATION = 3000 // 3 seconds
 
 interface GameScreenProps {
   score: number
-  setScore: (score: number) => void
+  setScore: (score: number | ((prevScore: number) => number)) => void
   highScore: number
   setHighScore: (score: number) => void
   onGameOver: (finalScore: number) => void
