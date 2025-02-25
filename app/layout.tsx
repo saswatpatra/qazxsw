@@ -1,8 +1,7 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { ThemeProvider } from "./components/ThemeContext"
-import type React from "react" // Added import for React
+import type React from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -24,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider>{children}</ThemeProvider>
+        {children}
         <SpeedInsights />
       </body>
     </html>
