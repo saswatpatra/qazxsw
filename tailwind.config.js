@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -43,6 +43,7 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         //These colors are kept from the original config
+        //They could be removed or kept depending on the desired outcome.
         primary: "#3d405b",
         secondary: "#f4f1de",
         accent: "#fee440",
@@ -56,4 +57,3 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 }
-
